@@ -81,7 +81,6 @@ const PaymentFormContent: React.FC<PaymentFormProps> = ({
       
       console.log('🎉 Demo Payment Successful!');
       console.log('💡 To process real payments, implement backend API to create payment intents');
-      console.log('🔑 Use your secret key on backend:', 'REDACTED_STRIPE_SECRETXXXXXX');
     } catch (error: any) {
       setPaymentStatus('error');
       setErrorMessage(error.message || 'An unexpected error occurred');
@@ -252,4 +251,4 @@ const PaymentForm: React.FC<PaymentFormProps> = (props) => {
   );
 };
 
-export default PaymentForm; 
+export default PaymentForm;

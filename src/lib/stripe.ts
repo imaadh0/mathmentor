@@ -1,8 +1,6 @@
 import { loadStripe } from '@stripe/stripe-js';
 
 // Stripe Test Keys for Sandbox Mode
-// Using your actual Stripe test keys
-// Secret key (for backend): REDACTED_STRIPE_SECRET_KEYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 const STRIPE_PUBLISHABLE_KEY = 'pk_test_51OYCbPFUqDTwzZQxQzMq1uWZhf9KNtzPnTqlYdHiGF60MU6wGf7TxSsIF1uyNWkUskk1HIbqsJjMZeAJCoqwsHIw00q9ALP8ER';
 
 // Initialize Stripe
@@ -37,7 +35,6 @@ export interface PaymentIntent {
 // Function to create payment intent (this would typically be done on the backend)
 export const createPaymentIntent = async (packageType: 'silver' | 'gold') => {
   // In a real application, this would be a call to your backend API using the secret key
-  // Backend would use: REDACTED_STRIPE_SECRET_KEYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   // For demo purposes, we'll simulate the response
   const amount = PACKAGE_PRICES[packageType];
 
@@ -65,4 +62,4 @@ export const TEST_CARDS = {
   mastercard: '5555555555554444',
   amex: '378282246310005',
   insufficient_funds: '4000000000009995'
-} as const; 
+} as const;
